@@ -1,27 +1,80 @@
 [
     {
         "id": 1,
-        "attr": "eyes",
-        "question": "Does your character have blue eyes?"
-    },
-    {
-        "id": 2,
-        "attr": "eyes",
-        "question": "Does your character have green eyes?"
-    },
-    {
-        "id": 3,
-        "attr": "eyes",
-        "question": "Does your character have black eyes?"
-    },
-    {
-        "id": 4,
         "attr": "bald",
+        "value": true,
         "question": "Is your character bald?"
     },
     {
-        "id": 5,
+        "id": 2,
         "attr": "gender",
+        "value": "male",
         "question": "Is your character male?"
+    },
+    {
+        "id": 3,
+        "attr": "gender",
+        "value": "female",
+        "question": "Is your character female?"
+    },
+    {
+        "id": 4,
+        "attr": "color-of-eyes",
+        "value": "blue",
+        "question": "Does your character have blue eyes?"
+    },
+    {
+        "id": 5,
+        "attr": "color-of-eyes",
+        "value": "green",
+        "question": "Does your character have green eyes?"
+    },
+    {
+        "id": 6,
+        "attr": "color-of-eyes",
+        "value": "black",
+        "question": "Does your character have black eyes?"
+    },
+    {
+        "id": 7,
+        "attr": "color-of-eyes",
+        "value": "brown",
+        "question": "Does your character have brown eyes?"
+    },
+    {
+        "id": 8,
+        "attr": "color-of-hair",
+        "value": "black",
+        "question": "Does your character have black hair?"
+    },
+    {
+        "id": 9,
+        "attr": "color-of-hair",
+        "value": "blonde",
+        "question": "Does your character have blonde hair?"
+    },
+    {
+        "id": 10,
+        "attr": "color-of-hair",
+        "value": "red",
+        "question": "Does your character have red hair?"
+    },
+    {
+        "id": 11,
+        "attr": "has-beard",
+        "value": true,
+        "question": "Does your character have beard?"
+    },
+    {
+        "id": 12,
+        "attr": "has-moustache",
+        "value": true,
+        "question": "Does your character have moustache?"
+    },
+    {
+        "id": 13,
+        "attr": "has-jewellery",
+        "value": true,
+        "question": "Does your character have jewellery?"
     }
 ]

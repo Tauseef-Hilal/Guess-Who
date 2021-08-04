@@ -5,44 +5,65 @@
     Guess Who? is a classic fun game for two players.
 """
 
-import json
 from time import sleep
+from random import choice
 from .display import (LINE,
                       show_cards,
                       show_questions,
+                      game_over_screen,
                       show_menu,
                       show_about_page,
                       show_credits_page)
-from .helper import (clear_screen,
+
+from .helper import (ask_question,
+                     handle_question,
+                     create_players,
+                     pick_card,
+                     clear_screen,
                      exit_game)
-from .classes import Player
-
-##################################################################
-# Import cards from cards.json and questions from questions.json
-##################################################################
-with open("Data/cards.json") as cards_json:
-    cards_list = json.load(cards_json)
-
-with open("Data/questions.json") as questions_json:
-    questions_list = json.load(questions_json)
-##################################################################
 
 
 def start_game():
     """
         Handle the game
     """
-    ########################################################
-    # The below function call is just for testing purpose
-    ########################################################
-    player = Player(questions=questions_list[:],
-                    cards=cards_list[:],
-                    secret_card=cards_list[0])
+    # Create Player objects
+    computer_player, human_player = create_players()
+    players = [computer_player, human_player]
 
-    show_cards(player)
-    show_questions(player)
+    # Display computer player's cards and set human player's secret card
+    show_cards(computer_player)
+    pick_card(human_player)
+
+    current_player = choice(players)
+    other_player = players[1 if current_player == computer_player else 0]
+
+    winner = None
+    game_over = False
+    while not game_over:
+        # Clear screen
+        clear_screen()
+
+        # Display human player's available cards and questions
+        show_cards(human_player)
+        print(f"{' '*77}[{current_player.name}'S TURN]{' '*75}")
+        if current_player == human_player:
+            show_questions(current_player)
+
+        # Ask and handle a question
+        question = ask_question(current_player)
+        handle_question(questioner=current_player,
+                        answerer=other_player,
+                        question=question)
+
+        if len(current_player.cards) == 1:
+            winner = current_player
+            game_over = True
+        else:
+            current_player, other_player = other_player, current_player
+
+    game_over_screen(human_player, winner)
     input()
-    ########################################################
 
 
 def main() -> None:

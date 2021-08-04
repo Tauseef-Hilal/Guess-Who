@@ -1,5 +1,5 @@
 """
-    No Docstring yet!
+    Contains display-specific functions
 """
 
 LINE = "=" * 175
@@ -34,7 +34,7 @@ def show_questions(player):
         Display available questions of player
     """
     print(LINE)
-    print("\t\t\t\t\t\t\t\t\t\t[QUESTIONS]")
+    print(f"{' '*70}[HUMAN PLAYER'S AVAILABLE QUESTIONS]{' '*75}")
     print(LINE)
     for question in player.questions:
         print(f"[{question['id']}] {question['question']}")
@@ -46,9 +46,27 @@ def show_cards(player):
         Display available cards of player
     """
     print(LINE)
-    print("\t\t\t\t\t\t\t\t\t\t[CARDS]")
+    print(f"{' '*73}[HUMAN PLAYER'S AVAILABLE CARDS]{' '*75}")
     print(LINE)
     print(*player.cards, sep="\n")
+    print(LINE)
+    if player.human:
+        print(
+            f"{''*77}[SECRET CARD] -> {vars(player.secret_card)}")
+        print(LINE)
+
+
+def game_over_screen(human_player, winner):
+    """
+        Show game over screen
+    """
+    print(LINE)
+    if winner == human_player:
+        print(f"{' '*82}CONGRATULATIONS!")
+        print(f"{' '*85}YOU WON!")
+    else:
+        print(f"{' '*79}BETTER LUCK NEXT TIME!")
+        print(f"{' '*83}COMPUTER WINS!")
     print(LINE)
 
 

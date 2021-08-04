@@ -91,7 +91,7 @@
         "bald": false,
         
         "has": {"beard": true,
-                "moustache": true,
+                "moustache": false,
                 "jewellery": false},
 
         "color": {"eyes": "black",
@@ -169,7 +169,7 @@
         
         "has": {"jewellery": true},
         
-        "color": {"eyes": "green",
+        "color": {"eyes": "brown",
                   "hair": "black"}
     },
     {
@@ -191,7 +191,7 @@
         
         "has": {"jewellery": true},
         
-        "color": {"eyes": "blue",
+        "color": {"eyes": "green",
                   "hair": "blonde"}
     },
     {
@@ -213,7 +213,7 @@
         
         "has": {"jewellery": false},
         
-        "color": {"eyes": "green",
+        "color": {"eyes": "brown",
                   "hair": "black"}
     },
     {
@@ -236,7 +236,7 @@
         "has": {"jewellery": false},
         
         "color": {"eyes": "blue",
-                  "hair": "blonde"}
+                  "hair": "red"}
     },
     {
         "name": "John",
