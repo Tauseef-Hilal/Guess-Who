@@ -18,14 +18,14 @@ CREDITS = f"""
 {LINE}
 \t\t\t\t\t\t\t\t\t\t[CREDITS]
 {LINE}
-\t\t\t\t\t\t\t\t  Currently there is nothing in here!
+\t\t\t\t\t\t\t\t\t\tTauseef\n\t\t\t\t\t\t\t\t\t\tLambo4\n\t\t\t\t\t\t\t\t\t\t8Koi\n\t\t\t\t\t\t\t\t\t\tKarma\n\t\t\t\t\t\t\t\t\t\tVic
 {LINE}"""
 
 ABOUT = f"""
 {LINE}
 \t\t\t\t\t\t\t\t\t\t[ABOUT]
 {LINE}
-\t\t\t\t\t\t\t\t  Currently there is nothing in here!
+\t\t\t\t\t\t\t Guess Who? is a classic fun game for two players.\n\t\t\t\t\t\t  This version was brought together by a group of new developers.\n\t\t\t\t\t\tMostly done for educational purposes, it is here for your enjoyment!
 {LINE}"""
 
 
